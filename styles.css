@@ -40,6 +40,8 @@ nav ul li a:hover {
     /* This controls the location of the "this is the official personal website" */
     margin-left: 0%;
     margin-top: 0%;
+    margin-bottom: 100%;
+    margin-right: auto;
     z-index: 1;
     position: relative;
 }
