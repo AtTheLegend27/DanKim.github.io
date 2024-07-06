@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Kim's Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero" id="home">
+        <div class="background-home-image"></div>
+        <div class="details">
+            <nav>
+                <img src="images/Daniel Kim KE Name.png" class="logo" alt="Daniel Kim Logo">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <h1><span>My Official Personal Website</span></h1>
+            <p>Bio:
+                <br>Computer Science and Molecular Cell Biology at UC Berkeley
+                <br>Data and Machine Learning Intern at CVS Health 
+            </p>
+            <a href="#">Resume</a>
+        </div>
+    </header>
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>Details about you...</p>
+    </section>
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <p>Details about your projects...</p>
+    </section>
+    <section id="experience" class="experience-section">
+        <h2>Experience</h2>
+        <p>Details about your experience...</p>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>Details about how to contact you...</p>
+    </section>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+    </script>
+</body>
+</html>
