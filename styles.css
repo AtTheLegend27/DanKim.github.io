@@ -1,14 +1,19 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 .hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* background: black; */
 }
 
 nav {
@@ -20,10 +25,13 @@ nav {
     justify-content: space-between;
 }
 
-nav ul li {
-    display: inline-block;
+nav ul {
+    display: flex;
     list-style: none;
-    margin: 10px 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -33,42 +41,32 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: beige;
+    color: green;
 }
 
 .details {
-    /* This controls the location of the "this is the official personal website" */
-    margin-left: 0%;
-    margin-top: 0%;
-    margin-bottom: 100%;
-    margin-right: auto;
-    z-index: 1;
     position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-top: 0%;
 }
 
 .details h1 {
     font-size: 50px;
     color: black;
     background-color: white;
-    margin-top: 25%;
-    margin-left: 2%;
-    margin-right: 56%;
+    padding: 0 15px;
     margin-bottom: 10px;
 }
 
-/* span{ 
-    color: orange
-} */
-
 .details p {
     color: black;
-    line-height: 22px;
+    line-height: 1.6;
     font-weight: bold;
-    margin-top: 3%;
-    margin-left: 3%;
-    background-color: white;
-    margin-right: 65%;
+    /* background-color: white; */
     font-size: large;
+    display: inline-block;
+    padding: 0 15px;
 }
 
 .details a {
@@ -78,8 +76,7 @@ nav ul li a:hover {
     font-weight: bold;
     color: white;
     display: inline-block;
-    margin: 30px 0;
-    margin-left: 3%;
+    margin-top: 30px;
     border-radius: 5px;
 }
 
@@ -93,13 +90,51 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    margin-top: 0;
 }
 
+.resume-details a{
+    background: darkblue;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+/* nav ul li resume {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+} */
+
+nav ul li resume:hover {
+    color: green;
+}
+
+.home-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-footer p {
+    color: black;
+    line-height: 1.6;
+    font-weight: bold;
+    font-size: large;
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 0%;
+}
 section {
     padding: 100px 20px;
     min-height: 100vh;
-    /* color:beige */
 }
 
 section h2 {
@@ -107,38 +142,211 @@ section h2 {
     margin-bottom: 20px;
 }
 
+section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 section p {
     font-size: 1.2em;
 }
 
-.about-section {
+.about-section,
+.background-section,
+.achievements-section,
+.contact-section,
+.background-section2{
     background-image: url(images/BI\ Everything.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: beige;
+    height: 0;
+    color: burlywood;
 }
 
-.projects-section {
-    background-image: url(images/BI\ Everything.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: beige;
+/* Timeline CSS */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
 }
 
-.experience-section {
-    background-image: url(images/BI\ Everything.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: beige;
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    animation: moveline 6s linear forwards;
 }
 
-.contact-section {
-    background-image: url(images/BI\ Everything.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: beige;
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height:100%;
+    }
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container:nth-child(2){
+    animation-delay: 1s;
+}
+
+.container:nth-child(3){
+    animation-delay: 2s;
+}
+
+.container:nth-child(4){
+    animation-delay: 3s;
+}
+
+.container:nth-child(5){
+    animation-delay: 4s;
+}
+
+.container:nth-child(6){
+    animation-delay: 5s;
+}
+
+.container.left-container {
+    left: 0;
+}
+
+.container.right-container {
+    left: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /* background-color: #fff; */
+    outline: auto;
+    top: 15px;
+    right: -12px;
+    z-index: 1;
+}
+
+.container.right-container::after {
+    left: -12px;
+}
+
+.textbox {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.textbox h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.textbox small {
+    display: block;
+    margin-bottom: 15px;
+    color: gray;
+}
+
+.textbox p {
+    color: black;
+}
+
+.UCBLogo{
+    position: absolute;
+    width: 40px;
+    top: 10px;
+    right: -50px;
+    z-index: 2;
+}
+
+.CVSHEALTHLogo {
+    position: absolute;
+    width: 120px;
+    top: 30px;
+    right: -50px;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.right-container .UCBLogo,
+.right-container .CVSHEALTHLogo {
+    left: -50px;
+    right: auto;
+}
+
+/* Logos */
+.GithubLogo,
+.EmailLogo,
+.linkedInLogo {
+    width: 40px;
+    height: 40px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .timeline{
+        margin: 50px auto;
+    }
+
+    .timeline::after{
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    
+    .textbox{
+        font-size: 13px;
+    }
+
+    .textbox small{
+        margin-bottom: 10px;
+    }
+
+    .container.left-container,
+    .container.right-container {
+        left: 0;
+    }
+
+    .container.right-container::after {
+        left: -30px;
+    }
+
+    .UCBLogo,
+    .CVSHEALTHLogo {
+        left: 20px;
+        right: auto;
+    }
 }
