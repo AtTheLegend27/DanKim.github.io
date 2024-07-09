@@ -345,8 +345,19 @@ section p {
 }
 
 
+.contact-section ul li a{
+    color: transparent;
+    background: none;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.contact-section ul li{
+    display: inline-block;
+    color: transparent;
+    background: none;
+  }
+  
 
 
 
@@ -378,3 +389,4 @@ section p {
     left: -50px;
     right: auto;
 }
+
