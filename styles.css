@@ -154,8 +154,7 @@ section p {
 .about-section,
 .background-section,
 .achievements-section,
-.contact-section,
-.background-section2{
+.contact-section{
     background-image: url(images/BI\ Everything.webp);
     background-position: center;
     background-repeat: no-repeat;
@@ -167,6 +166,165 @@ section p {
     height: auto; /* Allow height to grow with content */
     overflow: auto; /* Enable scrolling if content overflows */
 }
+
+.about-section h2,
+.background-section h2,
+.achievements-section h2,
+.contact-section {
+    text-align: center;
+}
+
+/* About me Section */
+.about-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.pPhoto {
+    border-radius: 50%;
+    width: 175px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.skills-languages-container h4 {
+    font-size: 1.4em;
+    /* font-weight: normal; */
+    line-height: 1.6;
+    
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.skills-languages-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    gap: 0px; 
+}
+
+.skills, .languages {
+    max-width: 400px;
+    text-align: left;
+}
+
+.skills p, .languages p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.6; 
+}
+
+.skill-bar {
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.skill-bar-inner {
+    height: 20px;
+    border-radius: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.skill-python { width: 100%; background-color: gold; }
+.skill-java { width: 100%; background-color: gold; }
+.skill-r { width: 90%; background-color: silver; }
+.skill-sql { width: 80%; background-color: #ff6700; }
+.skill-html { width: 80%; background-color: #ff6700; }
+.skill-css { width: 80%; background-color: #ff6700; }
+.skill-c { width: 75%; background-color: #ff6700; }
+.skill-js { width: 70%; background-color: #ff6700; }
+
+
+
+/* Achievements Section */
+.achievements-section .content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.achievements-section .acontainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.achievements-section .text-content {
+    flex: 0 0 60%;
+    padding-right: 20px;
+    background-color: rgba(255, 255, 255, 0.756);
+    border: 5px solid rgb(127, 82, 14);
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.achievements-section .image-content {
+    flex: 0 0 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievements-section .image-content img {
+    width: 100%;
+    max-width: 200px; /* Adjust the max-width as needed */
+    margin-right: 20px;
+}
+
+.achievements-section h4 {
+    color: rgb(127, 82, 14);
+}
+
+.achievements-section h5 {
+    display: block;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.achievements-section p {
+    color: black;
+    font: bold;
+}
+
+.achievements-section ul {
+    display: inline-flex;
+}
+
+.achievements-section li {
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+
 
 /* Timeline CSS */
 .timeline {
@@ -343,7 +501,6 @@ section p {
         right: auto;
     }
 }
-
 
 .contact-section ul li a{
     color: transparent;
