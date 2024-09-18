@@ -402,6 +402,10 @@ section p {
     animation-delay: 5s;
 }
 
+.container:nth-child(7){
+    animation-delay: 6s;
+}
+
 .container.left-container {
     left: 0;
 }
