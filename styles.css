@@ -365,7 +365,7 @@ section p {
 
 @keyframes movedown{
     0%{
-        opacity: 1;
+        opacity: 0;
         transform: translateY(-30px);
     }
     100%{
@@ -396,14 +396,6 @@ section p {
 
 .container:nth-child(5){
     animation-delay: 4s;
-}
-
-.container:nth-child(6){
-    animation-delay: 5s;
-}
-
-.container:nth-child(7){
-    animation-delay: 6s;
 }
 
 .container.left-container {
