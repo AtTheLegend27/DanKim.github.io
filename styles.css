@@ -196,7 +196,7 @@ section p {
     border-radius: 50%;
     width: 150px;
     height: 200px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .about-text {
@@ -275,6 +275,7 @@ section p {
 .achievements-section .acontainer {
     display: flex;
     justify-content: space-between;
+    /* align-items: flex-start; */
     margin-bottom: 40px;
 }
 
@@ -296,7 +297,8 @@ section p {
 
 .achievements-section .image-content img {
     width: 100%;
-    max-width: 200px; /* Adjust the max-width as needed */
+    max-width: 300px; 
+    max-height:200px;
     margin-right: 20px;
 }
 
@@ -457,6 +459,14 @@ section p {
 .HandshakeLogo{
     width: 40px;
     height: 40px;
+}
+
+.timeline-image {
+    width: 350px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: block;
 }
 
 /* Responsive adjustments */
