@@ -10,6 +10,14 @@ html, body {
     padding: 0;
 }
 
+body {
+    background-image: url("images/BI Everything.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -40,7 +48,7 @@ nav ul li a {
 }
 
 li a:hover {
-    color: green;
+    color: burlywood;
   }
 
 .details {
@@ -81,7 +89,8 @@ a {
 }
 
 .background-home-image {
-    background-image: url(images/UCB\ Wallpaper\ 1.jpg);
+    /* background-image: url(images/UCB\ Wallpaper\ 1.jpg); */
+    background-image: url(images/UCB_wallpaper_4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,7 +118,7 @@ a {
 }
 
 .resume-link:hover a{
-    color: green;
+    color: burlywood;
 }
 
 .home-footer {
@@ -151,11 +160,12 @@ section p {
     font-size: 1.2em;
 }
 
-.about-section,
+/* .about-section,
 .background-section,
 .achievements-section,
 .contact-section{
-    background-image: url(images/BI\ Everything.webp);
+    Not Active background-image: url(images/BI\ Everything.webp);
+    background-image: url(images/bi_num5.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -163,8 +173,21 @@ section p {
     color: burlywood;
     padding: 100px 20px;
     min-height: 100vh;
-    height: auto; /* Allow height to grow with content */
-    overflow: auto; /* Enable scrolling if content overflows */
+    height: auto; 
+    overflow: auto; 
+} */
+
+.about-section,
+.background-section,
+.achievements-section,
+.contact-section {
+    background-color: #232349c8; 
+    border: 8px solid #a9a9a9; /* Darker gray border for embroidery effect */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Optional soft inner shadow */
+    border-radius: 10px; /* Optional: smooth rounded corners */
+    padding: 150px 20px;
+    min-height: 100vh;
+    color: burlywood;
 }
 
 .about-section h2,
@@ -213,7 +236,6 @@ section p {
     font-size: 1.4em;
     /* font-weight: normal; */
     line-height: 1.6;
-    
 }
 
 .about-text p {
@@ -283,7 +305,7 @@ section p {
     flex: 0 0 60%;
     padding-right: 20px;
     background-color: rgba(255, 255, 255, 0.756);
-    border: 5px solid rgb(127, 82, 14);
+    border: 5px solid rgb(102, 64, 7);
     padding: 10px;
     margin-left: 20px;
 }
@@ -310,6 +332,7 @@ section p {
     display: block;
     margin-bottom: 15px;
     color: black;
+    font: bold;
 }
 
 .achievements-section p {
@@ -427,8 +450,9 @@ section p {
 
 .textbox {
     padding: 20px 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.756);;
     position: relative;
+    border: 5px solid rgb(102, 64, 7);
     border-radius: 6px;
     font-size: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -444,13 +468,13 @@ section p {
     display: block;
     margin-bottom: 15px;
     color: black;
+    font: bold;
 }
 
 .textbox p {
     color: black;
     font: bold;
 }
-
 
 /* Logos */
 .GithubLogo,
